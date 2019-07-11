@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Abaco.Views.LoginPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+            Padding="10,20,10,5">
+
+                <Image 
+               
+                Source="abacologo.png"
+                WidthRequest="100"/>
+                
+
+                  
+                    <Entry
+                   
+                    Placeholder="Enter Your email"></Entry>
+                  
+                    <Entry
+                   
+                    Placeholder="Enter Your Password"
+                    IsPassword="True"></Entry>
+
+                <ActivityIndicator>
+
+                </ActivityIndicator>
+                <StackLayout 
+                    Orientation="Horizontal">
+                    <Label
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Center"
+                    Text="Rememberme on this device"></Label>
+                    <Switch HorizontalOptions="End"></Switch>
+                </StackLayout>
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Forgot your password"
+                    TextColor="Blue">
+                    
+                </Label>
+
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button 
+                        Grid.Row="0"
+                        Grid.Column="0"
+                BackgroundColor="navy"
+                BorderRadius="23"
+                HeightRequest="46"
+                TextColor="White"
+                Text="Iniciar">
+
+                    </Button>
+                    <Button 
+                        Grid.Row="0"
+                        Grid.Column="1"
+                BackgroundColor="navy"
+                BorderRadius="23"
+                HeightRequest="46"
+                TextColor="White"
+                Text="Registrar">
+
+                    </Button>
+
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+       
+    </ContentPage.Content>
+</ContentPage>
