@@ -10,11 +10,10 @@ namespace Abaco.Views
 
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
-
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LoginPage : ContentPage
+	public partial class AbacoTabbedPage : TabbedPage
 	{
-		public LoginPage ()
+		public AbacoTabbedPage ()
 		{
 			InitializeComponent ();
 		}

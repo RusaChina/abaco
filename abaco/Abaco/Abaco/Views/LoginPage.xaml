@@ -4,72 +4,80 @@
              x:Class="Abaco.Views.LoginPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView
+            BindingContext="{Binding Login}">
             <StackLayout
-            Padding="10,20,10,5">
+            Padding="40
+                ">
 
                 <Image 
                
                 Source="abacologo.png"
                 WidthRequest="100"/>
-                
+                <Entry
+                    Keyboard="Email"
+                    Text="{Binding Email, Mode=TwoWay}"
+                    Placeholder="Enter Your email"
+                    >
+                    
+                </Entry>
 
-                  
-                    <Entry
-                   
-                    Placeholder="Enter Your email"></Entry>
-                  
-                    <Entry
-                   
+                <Entry
                     Placeholder="Enter Your Password"
-                    IsPassword="True"></Entry>
-
-                <ActivityIndicator>
-
-                </ActivityIndicator>
-                <StackLayout 
-                    Orientation="Horizontal">
-                    <Label
-                    HorizontalOptions="StartAndExpand"
-                    VerticalOptions="Center"
-                    Text="Rememberme on this device"></Label>
-                    <Switch HorizontalOptions="End"></Switch>
-                </StackLayout>
+                    IsPassword="True"
+                    Text="{Binding Password, Mode=TwoWay}">
+                    
+                </Entry>
                 <Label
                     HorizontalOptions="Center"
                     Text="Forgot your password"
                     TextColor="Blue">
-                    
+
                 </Label>
+                <Button 
+                        
+                BackgroundColor="navy"
+                BorderRadius="23"
+                HeightRequest="46"
+                
+                TextColor="White"
+                Text="Iniciar"
+                Command="{Binding IniciarCommand}">
+
+                </Button>
+                <StackLayout 
+                    Margin="10,0"
+                    Orientation="Horizontal">
+                    
+                    <Label
+                    HorizontalOptions="StartAndExpand"
+                    Text="Rememberme on this device"></Label>
+                    
+                    <Switch 
+                        IsToggled="{Binding IsRemembered, Mode=TwoWay}"
+                       HorizontalOptions="End"></Switch>
+                </StackLayout>
+                
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning, Mode=TwoWay}"
+                    VerticalOptions="CenterAndExpand">
+
+                </ActivityIndicator>
 
                 
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="2*"/>
-                    </Grid.ColumnDefinitions>
+                    
                     <Button 
-                        Grid.Row="0"
-                        Grid.Column="0"
+                        
                 BackgroundColor="navy"
                 BorderRadius="23"
                 HeightRequest="46"
-                TextColor="White"
-                Text="Iniciar">
-
-                    </Button>
-                    <Button 
-                        Grid.Row="0"
-                        Grid.Column="1"
-                BackgroundColor="navy"
-                BorderRadius="23"
-                HeightRequest="46"
+              
                 TextColor="White"
                 Text="Registrar">
 
                     </Button>
 
-                </Grid>
+                
 
             </StackLayout>
         </ScrollView>

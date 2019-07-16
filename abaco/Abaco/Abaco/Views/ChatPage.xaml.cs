@@ -12,9 +12,9 @@ namespace Abaco.Views
     using Xamarin.Forms.Xaml;
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LoginPage : ContentPage
+	public partial class ChatPage : ContentPage
 	{
-		public LoginPage ()
+		public ChatPage ()
 		{
 			InitializeComponent ();
 		}
