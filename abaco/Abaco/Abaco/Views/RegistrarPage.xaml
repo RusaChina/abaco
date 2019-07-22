@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Abaco.Views.RegistrarPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                     Padding="32"
+                     Spacing="10">
+            <Label Text="Registar"
+                FontSize="Large"
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="textNombre" 
+                   Placeholder="Nombre"/>
+
+            <Entry x:Name="textApellido" 
+                   Placeholder="Apellido"/>
+
+            <Entry x:Name="textZona" 
+                   Placeholder="Zona"/>
+
+            <Entry x:Name="textNumero" 
+                   Placeholder="Numero"/>
+
+            <Entry x:Name="textPassword" 
+                   Placeholder="Password"
+                   IsPassword="True"/>
+
+            <Entry x:Name="textCorreo" 
+                   Placeholder="Correo"/>
+
+            <Button x:Name="BtnRegistrar" 
+                    Text="Registar"
+                    Clicked="BtnRegistrar_Clicked"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

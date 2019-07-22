@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Abaco.Views.ListaUsuarioPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <ListView x:Name="ListaUsuario"
+                    HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label Text="{Binding nombre}" />
+                                <Label Grid.Column="1"
+                                       Text="{Binding apellido}"/>
+                                <Label Grid.Column="2"
+                                       Text="{Binding zona}"/>
+                                <Label Grid.Column="3"
+                                       Text="{Binding numero}"/>
+                                <Label Grid.Column="4"
+                                       Text="{Binding password}"/>
+                                <Label Grid.Column="5"
+                                       Text="{Binding correo}"/>
+                                <Label Grid.Column="6"
+                                       Text="{Binding activo}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

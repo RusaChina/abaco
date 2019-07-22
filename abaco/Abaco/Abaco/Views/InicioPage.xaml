@@ -163,15 +163,13 @@
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
-                <Label  Grid.Row="0" Grid.Column="0"
+                    <Label  Grid.Row="0" Grid.Column="0"
                     Text="Precio"
                    FontSize="Large"
                    >
-             
-            </Label>
+                    </Label>
                 <Entry   Grid.Row="0" Grid.Column="1"
-                Placeholder="Enter Your Password"
-                    IsPassword="True">
+                Placeholder="Introduce Precio">
             </Entry>
             </Grid>
         </StackLayout>

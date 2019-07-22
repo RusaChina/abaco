@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+
 
 using Foundation;
 using UIKit;
@@ -23,7 +25,8 @@ namespace Abaco.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            string dbPath = FileAccess.GetLocalFilePath("usuario.db3");
+            LoadApplication(new App(dbPath));
 
             return base.FinishedLaunching(app, options);
         }

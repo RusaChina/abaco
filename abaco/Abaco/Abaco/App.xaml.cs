@@ -1,5 +1,7 @@
 ﻿using System;
-using Xamarin.Forms.Xaml;   
+using Xamarin.Forms.Xaml;
+using Abaco.Models;
+using Abaco.Repository;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Abaco
@@ -9,11 +11,11 @@ namespace Abaco
     public partial class App : Application
     {
         #region Constructors
-        public App()
+        public App(String Filename)
         {
             InitializeComponent();
-
-            this.MainPage = new NavigationPage (new LoginPage());
+            UsuarioRepositorio.Inicializador(Filename);
+            this.MainPage = new NavigationPage (new AbacoTabbedPage());
         }
         #endregion
         #region Methods

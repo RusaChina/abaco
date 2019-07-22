@@ -10,7 +10,7 @@
         <tabs:InicioPage/>
         <tabs:ListaPage/>
         <tabs:CuentaPage/>
-        <tabs:ChatPage/>
+        
         
     </TabbedPage.Children>
     
